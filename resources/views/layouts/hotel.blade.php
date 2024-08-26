@@ -15,16 +15,13 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="{{route('hotels.f1')}}">1F</a>                   
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{route('hotels.f2')}}">2F</a>                   
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="{{route('hotels.f3')}}">3F</a>                   
                 </li>
             </ul>
         </div>
@@ -38,3 +35,4 @@
 </body>
 
 </html>
+

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\HotelController;
 
 //car
 Route::get('cars_execl', [CarController::class, 'excel'])->name('cars.excel');
@@ -14,7 +15,8 @@ Route::get('/', function () {
     // dd($url);
     // echo "123";
     // return redirect('/cars');
-    return redirect()->route('cars.index');
+    // return redirect()->route('cars.index');
+    return redirect()->route('hotels.f1');
 });
 
 Route::get('/child', function () {
@@ -33,3 +35,14 @@ Route::get('/f3', function () {
     return view('f3');
 });
 
+Route::get('/w3', function () {
+    return view('w3');
+});
+
+
+// hotel
+
+Route::get('/hotels_f1', [HotelController::class, 'f1'])->name('hotels.f1');
+Route::get('/hotels_f2', [HotelController::class, 'f2'])->name('hotels.f2');
+Route::get('/hotels_f3', [HotelController::class, 'f3'])->name('hotels.f3');
+Route::resource('hotels', HotelController::class);
